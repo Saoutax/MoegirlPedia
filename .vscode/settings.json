@@ -1,0 +1,12 @@
+{
+    "conventionalCommits.scopes": [
+        "Zh/common.js",
+        "Zh/common.css",
+        "Zh/vector-2022.js",
+        "Zh/vector-2022.css",
+        "Zh/moeskin.css",
+        "Commons/common.js",
+        "Commons/common.css",
+        "Commons/moeskin.css",
+    ]
+}

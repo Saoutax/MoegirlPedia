@@ -1,0 +1,90 @@
+name: Auto Build and Sync
+
+on:
+  push:
+    paths:
+      - 'src/**'
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "选择任务"
+        type: choice
+        required: false
+        options:
+          - sync
+          - build_and_sync
+
+env:
+  API_USER_AGENT: ${{ secrets.API_USER_AGENT }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      build-done: ${{ steps.build-step.outputs.status }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - id: build-step
+        name: Build project
+        run: |
+          pnpm run build
+          echo "status=done" >> $GITHUB_OUTPUT
+
+      - name: Commit and push build
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          if ! git diff --cached --quiet; then
+            CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+            git commit -m "auto: build dist"
+            git push origin "$CURRENT_BRANCH"
+          else
+            echo "No changes in build output, skipping commit."
+          fi
+
+  sync:
+    needs: build
+    if: |
+      github.event_name == 'push' ||
+      github.event.inputs.task == 'sync' ||
+      github.event.inputs.task == 'build_and_sync'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set Node Version
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Script
+        env:
+          ZH: ${{ secrets.ZH }}
+          CM: ${{ secrets.CM }}
+        run: node scripts/sync.js

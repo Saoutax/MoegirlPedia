@@ -1,0 +1,16 @@
+body:not(.skin-vector) main.moe-flexible-container {
+    width: 97.5%;
+  
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+  
+#grandpa-entrance {
+    display: none;
+}
+  
+button.__button-light-1379ga8-dhltmd.n-button.n-button--default-type.n-button--tiny-type,
+a.__button-light-1379ga8-dhltmd.n-button.n-button--default-type.n-button--tiny-type.dropdown-trigger {
+    display: none;
+}

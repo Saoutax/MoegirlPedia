@@ -1,0 +1,45 @@
+@use "sass:map";
+@import url('//testingcf.jsdelivr.net/gh/Mustafabot/js-MoegiriPedia/Cat-a-lot.css');
+@import url('/index.php?title=User:穆斯塔法凯末尔/DisamAssist.css&action=raw&ctype=text/css');
+
+$bg-colors: (
+    light: #f5faff,
+    dark: #2d3748,
+    white: white,
+    black: #1a202c
+);
+
+.ns-talk {
+    dd {
+        margin: 0;
+        padding: 0;
+    }
+
+    dl {
+        border-top: solid 1px light-dark(map.get($bg-colors, light), map.get($bg-colors, black));
+        border-left: solid 1px light-dark(map.get($bg-colors, light), map.get($bg-colors, black));
+        padding-top: 0.5em;
+        padding-left: 0.5em;
+        margin-left: 1em;
+        background: light-dark(map.get($bg-colors, light), map.get($bg-colors, black));
+
+        @for $i from 1 through 12 {
+        dl {
+            $color: if($i % 2 == 0, map.get($bg-colors, white), map.get($bg-colors, light));
+            background: light-dark($color, map.get($bg-colors, black));
+        }
+        }
+    }
+}
+
+.mw-editsection-divider {
+    display: revert !important;
+}
+
+.mw-logline-create {
+    display: none;
+}
+
+svg.ipe-icon {
+    height: 0.8lh;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "moegirlpedia",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "vite build",
+    "lint": "npx eslint --fix ."
+  },
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "glob": "^13.0.0",
+    "sass": "^1.94.2",
+    "terser": "^5.44.1",
+    "vite": "^7.2.4",
+    "wiki-saikou": "^7.1.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "types-mediawiki": "^2.0.0"
+  }
+}

@@ -26,7 +26,11 @@ export default defineConfig({
     build: {
         outDir: "dist",
         emptyOutDir: true,
-        minify: false,
+        minify: "terser",
+        terserOptions: {
+            mangle: false,
+            compress: true,
+        },
         rollupOptions: {
             input: jsEntries,
             output: { entryFileNames: "[name].js", chunkFileNames: "[name].js" }

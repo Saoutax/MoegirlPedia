@@ -1,0 +1,7 @@
+addReviewers: true
+addAssignees: true
+reviewers:
+  - Saoutax
+assignees:
+  - author
+  - Saoutax

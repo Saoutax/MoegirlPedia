@@ -14,7 +14,7 @@
     "sass": "^1.94.2",
     "terser": "^5.44.1",
     "vite": "^7.2.7",
-    "wiki-saikou": "^7.3.0"
+    "wiki-saikou": "^7.4.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

@@ -24,8 +24,8 @@ importers:
         specifier: ^7.2.7
         version: 7.2.7(sass@1.94.2)(terser@5.44.1)
       wiki-saikou:
-        specifier: ^7.3.0
-        version: 7.3.0
+        specifier: ^7.4.1
+        version: 7.4.1
     devDependencies:
       '@eslint/js':
         specifier: ^9.39.1
@@ -638,8 +638,8 @@ packages:
       picomatch:
         optional: true
 
-  fexios@5.0.1:
-    resolution: {integrity: sha512-ImvFUH2ToO2rS8XqQeQyhYoAkqwPDwN36hjky9hJI2gTJNt0x/GsbnithuGfPrIEWT9015Ssm+psPEuMby80lw==}
+  fexios@5.2.0:
+    resolution: {integrity: sha512-GwwDAQQols1qyIRDGfYLX6cJrpx5V6jSTTYW6xVLepIyXx1OGhsFyd4Ln3/G27yhYD9YBgZc8km2fP05iwjuLQ==}
     engines: {node: ^16.15.0 || >=18.0.0}
 
   file-entry-cache@8.0.0:
@@ -885,9 +885,6 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
-  tslib@2.8.1:
-    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
-
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -951,8 +948,8 @@ packages:
     engines: {node: '>= 8'}
     hasBin: true
 
-  wiki-saikou@7.3.0:
-    resolution: {integrity: sha512-yyaDtvz9AusB7KoItKP85+1rw/tto16+lhACs7aqxgotYUrk4eD9HugxVpil642ASxVley+G3cazD9Ogw4eqdg==}
+  wiki-saikou@7.4.1:
+    resolution: {integrity: sha512-AizHfx7QMUA5fMFZpV26e6ngl03Csu+tOWDKt1cHV3AO1JeAJ7X7of/gU8WAkmv95IWCzPG1bQ9KZMkUHsh0Ww==}
 
   word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
@@ -1446,7 +1443,7 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.3
 
-  fexios@5.0.1: {}
+  fexios@5.2.0: {}
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -1687,8 +1684,6 @@ snapshots:
       is-number: 7.0.0
     optional: true
 
-  tslib@2.8.1: {}
-
   type-check@0.4.0:
     dependencies:
       prelude-ls: 1.2.1
@@ -1722,10 +1717,9 @@ snapshots:
     dependencies:
       isexe: 2.0.0
 
-  wiki-saikou@7.3.0:
+  wiki-saikou@7.4.1:
     dependencies:
-      fexios: 5.0.1
-      tslib: 2.8.1
+      fexios: 5.2.0
 
   word-wrap@1.2.5: {}
 

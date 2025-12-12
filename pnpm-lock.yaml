@@ -15,14 +15,14 @@ importers:
         specifier: ^13.0.0
         version: 13.0.0
       sass:
-        specifier: ^1.95.1
-        version: 1.95.1
+        specifier: ^1.96.0
+        version: 1.96.0
       terser:
         specifier: ^5.44.1
         version: 5.44.1
       vite:
         specifier: ^7.2.7
-        version: 7.2.7(sass@1.95.1)(terser@5.44.1)
+        version: 7.2.7(sass@1.96.0)(terser@5.44.1)
       wiki-saikou:
         specifier: ^7.4.1
         version: 7.4.1
@@ -840,8 +840,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  sass@1.95.1:
-    resolution: {integrity: sha512-uPoDh5NIEZV4Dp5GBodkmNY9tSQfXY02pmCcUo+FR1P+x953HGkpw+vV28D4IqYB6f8webZtwoSaZaiPtpTeMg==}
+  sass@1.96.0:
+    resolution: {integrity: sha512-8u4xqqUeugGNCYwr9ARNtQKTOj4KmYiJAVKXf2CTIivTCR51j96htbMKWDru8H5SaQWpyVgTfOF8Ylyf5pun1Q==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -1638,7 +1638,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.53.3
       fsevents: 2.3.3
 
-  sass@1.95.1:
+  sass@1.96.0:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.1.4
@@ -1700,7 +1700,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite@7.2.7(sass@1.95.1)(terser@5.44.1):
+  vite@7.2.7(sass@1.96.0)(terser@5.44.1):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -1710,7 +1710,7 @@ snapshots:
       tinyglobby: 0.2.15
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.95.1
+      sass: 1.96.0
       terser: 5.44.1
 
   which@2.0.2:

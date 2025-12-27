@@ -42,4 +42,9 @@ $bg-colors: (
 
 svg.ipe-icon {
     height: 0.8lh;
+    
+    .mw-editsection & {
+        height: 1em;
+        display: inline-block;
+    }
 }

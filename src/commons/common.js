@@ -92,4 +92,4 @@ loadGHGadget("Saoutax/MediaWikiTools@main/src/CategoryFileInspector");
         "fix-double-entrance.js"
     ]
 };
-loadGHGadget("MoegirlPediaInterfaceAdmins/MoegirlPediaInterfaceCodes@master/src/gadgets/InPageEdit-v2/Gadget-InPageEdit-v2");
+loadGHGadget("MoegirlPediaInterfaceAdmins/MoegirlPediaInterfaceCodes@master/src/gadgets/inpageedit-next/Gadget-inpageedit-next");
